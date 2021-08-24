@@ -2,11 +2,6 @@ import { keysIn, sum, filter, max } from 'lodash';
 
 const TOTAL = 'total';
 
-const getProperties = (data) => {
-    const [feature] = data.features;
-    return feature && keysIn(feature.properties);
-};
-
 const getYears = (data) =>
     filter(keysIn(data.properties), (prop) => !isNaN(parseInt(prop, 10)));
 
@@ -45,7 +40,6 @@ const getSelection = (selection) => {
 };
 
 export {
-    getProperties,
     getSelection,
     getYearTotals,
     getYears,
