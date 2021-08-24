@@ -1,38 +1,89 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  width: 65vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  font-size: calc(1px + 2vmin);
+  text-align: left;
+}
+
+ /* map */
+svg {
+  display: block;
+  width: 100%;
+  min-height: 55vh;
+  fill: rgba(68, 170, 238, 0.5);
+  stroke: #44aaee;
+}
+
+svg .area:hover {
+  fill:#9ccae9;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+svg .label {
+  font-size: calc(2px + 2vmin);
+}
+
+/* bar chart */
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/* view port */
+.box {
+  height: auto;
+  margin: 15px 15px;
+  border-radius: 10px;
+  border:1px solid black;
+  background-color: #191d25;
+  padding: 15px;
+}
+.row {
+  display: flex;
+  flex-wrap:wrap;
+}
+.cell {
+  flex: 1 1 200px;
+  min-height: 60vh;
+  padding: 15px;
+}
+
+.recharts-cartesian-axis-tick {    
+  font-size: calc(2px + 2vmin);
+  font-family: Roboto, sans-serif;
+}
+
+.legend-container {
+  position: absolute;
+  display: flex;
+  font-size: calc(4px + 1vmin);
+  color: #797a7a;
+}
+
+.legend {
+  display: inline-block;
+  background: rgb(68,170,238);
+  background: linear-gradient(90deg, rgba(68, 170, 238, 1) 0%, rgba(68,170,238,1) 4%, rgba(255,240,0,1) 4%, rgba(252,187,6,1) 51%, rgba(255,0,0,1) 100%);
+   width: 200px;
+   height: 16px;
+   margin: 0px 5px 0 5px;
 }
