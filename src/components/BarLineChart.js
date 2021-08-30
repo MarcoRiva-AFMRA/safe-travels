@@ -25,7 +25,7 @@ const BarLineChart = ({ data, onClick }) => {
     };
 
     return (
-        <ResponsiveContainer width="98%" height="90%" aspect={3}>
+        <ResponsiveContainer width="98%" height="90%" aspect={2}>
             <ComposedChart
                 margin={{
                     top: 10,
